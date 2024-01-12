@@ -1,0 +1,115 @@
+*{
+  --accent: #FF357A;
+  --accent2: #F9F871;
+  --BG : rgb(86, 4, 162);
+}
+
+
+body{
+  background: linear-gradient(to bottom right,#5604a2,#b66bfc) ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding-top: 100px;
+  font-family: poppins;
+  
+
+}
+
+#game-container{
+
+
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+
+
+}
+
+#cell-container{
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,auto) ;
+  border-radius: 16px;
+  position: relative;
+  border: 3px solid #fff;
+}
+#cell-container :nth-child(1){
+  border-top-left-radius: 8px;
+}
+#cell-container :nth-child(3){
+  border-top-right-radius: 8px;
+}
+#cell-container :nth-child(7){
+  border-bottom-left-radius: 8px;
+}
+#cell-container :nth-child(9){
+  border-bottom-right-radius: 8px;
+}
+.cell{
+  background-color: transparent;
+  width: 75px;
+  height: 75px;
+  border: 2px solid white;
+  font-size: 32px;
+  text-align: center;
+  line-height: 75px;
+  color: var(--accent);
+  font-family: "Permanent Marker", cursive;
+
+}
+button{
+  padding: 8px 24px;
+  border-radius:8px;
+  background-color: var(--accent);
+  border: none;
+  color: #fff;
+  font-family: "poppins";
+  letter-spacing: 1px;
+
+
+}
+#statusText{
+  color: #fff;
+}
+.statusText{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: fit-content;
+  background-color: transparent;
+  display: flex;
+  text-align: center;
+  font-weight: bolder;
+  color: #fff;
+  border-radius: 9px;
+  font-size: 24px;
+
+}
+.x,.o{
+  padding: 5px 20px;
+  width: 50%;
+  height: 100%;
+  border: 2px solid white;
+
+
+}
+.x{
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  
+}
+.o{
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.active{
+  background-color: var(--accent);
+}
+
+.win{
+  background-color: #FF357A;
+  color: white;
+}
